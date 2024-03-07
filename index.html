@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Library</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <img src="assets/book-stack.svg" alt="library logo" width="32px">
+      <h1>Library</h1>
+    </header>
+    <dialog>
+      <form action="" method="post">
+        <div class="form-row">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" minlength=1 maxlength=200 required>
+        </div>
+        <div class="form-row">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" minlength=1 maxlength=40 required>
+        </div>
+        <div class="form-row">
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" name="pages" min=0 max=9999 required>
+        </div>
+        <fieldset>
+          <legend>Have you read it yet?</legend>
+          <div class="radio-button-row">
+            <label for="read">Yes</label>
+            <input type="radio" id="read-true" name="read-check" value="true" checked required></input>
+          </div>
+          <div>
+            <label for="not-read">No</label>
+            <input type="radio" id="read-false" name="read-check" value="false" required></input>
+          </div>          
+        </fieldset>
+
+        <div class="button-row">
+          <button type="submit">Submit</button>
+          <button type="button" id="close-dialog-btn" autofocus>Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <section id="bookshelf">
+      <!-- generated in script -->
+    </section>
+
+  </main>
+</body>
+
+</html>
